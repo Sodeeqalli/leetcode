@@ -5,17 +5,42 @@ class Solution(object):
             '}' : '{',
             ']' : '['       
                  }
-
         stack = []
-        #if its not the first element
-        #if its a closing bracket
-        #if the bracket before it is its map corr
-
+        #Thought process
+        #If stack is empty and we encounter one in map, return false, if not in map, we append
+        #if its not empty, we append if its not in map or its in map but doesnt match top of stack, else pop
+        
+        
+        #we can think of the algorithm as.
+        # If the parenthesis in my map, move forward if not just append
+        # if the stack is not empty, move forward if not return False
+        # if the map value of the parenthesis is equal to the top of the stack. POP
+        # if it is not equal to the top of the stack. APPEND
+        
         for i in range(len(s)):
-            if i > 0 and s[i] in myMap and stack[-1] == myMap[s[i]]:
-                stack.pop()
+            if s[i] in myMap:
+                if stack:
+                    if stack[-1] == myMap[s[i]]:
+                        stack.pop()
+                    else:
+                        stack.append(s[i])
+                else:
+                    return False
             else:
-                stack.append(s[i])
-        return  not stack
+                stack.append(s[i])       
+        return not stack
+                    
+                    
+            
+            
+        
+        
+        
+if __name__ == "__main__":
+    solution = Solution()
+    
+    #Testing with parenthesis
+    print(solution.isValid('{([])}'))
+
 
 
