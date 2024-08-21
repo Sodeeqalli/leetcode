@@ -38,6 +38,7 @@
         # if it is not equal to the top of the stack. APPEND
         
         
+#DATA STRUCTURE : MAP , ARRAY
 class Solution(object):
     def isValid(self, s):
         myMap = {
