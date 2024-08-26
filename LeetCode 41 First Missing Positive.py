@@ -47,12 +47,14 @@
 #now lets put into practice
 class Solution(object):
     def firstMissingPositive(self, nums):
-        n = len(nums) #not a fore-thought, you will find out we will use it a lot 
+        n = len(nums) #not a fore-thought, decided to do this after solving 
         
+        #the loop to make all values out of range redundant
         for i in range(n):
             if nums[i] <= 0 or nums[i] > n:
                 nums[i] = n + 1
-            
+         
+         #marking the positions of all the values in range,  making sure we do it only once too   
         for i in range(n):
             num = abs(nums[i])
             
@@ -60,7 +62,7 @@ class Solution(object):
                 if nums[num -1] > 0:
                     nums[num -1 ] = -(nums[num -1])
                     
-        
+        #the first positive number come accross will have the index of the smallest missing positive number
         for i in range(n):
             if nums[i] > 0:
                 return i + 1
