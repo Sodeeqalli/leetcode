@@ -35,6 +35,8 @@ class Solution(object):
         palindrome = str(x) == str(x)[::-1]
         return palindrome
     
+    
+#Test
 if __name__ == "__main__":
     solution = Solution()
     print(solution.isPalindrome(121))
