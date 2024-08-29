@@ -59,7 +59,7 @@ class Solution(object):
 
         return True  #return True if it pases the uniuue number Test
 
-
+#Test it out
 if __name__ == "__main__":
     solution = Solution()
     
