@@ -47,8 +47,8 @@ class Solution(object):
         for i in range(len(arr)):  #for every number in the array
             if arr[i] in times_occurred:  #if we have come accross it before
                 times_occurred[arr[i]] += 1 #increase its count by 1
-            else:                            #if not
-                 times_occurred[arr[i]] = 1  #initialize its count to one
+            else:                           #if not
+                 times_occurred[arr[i]] = 1 #initialize its count to one
         
         #after we get the number of occurences of each number, we see if any two numbers are the same
         track = [] #create an array to keep track of the counts

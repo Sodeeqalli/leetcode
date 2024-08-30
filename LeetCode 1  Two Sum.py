@@ -47,16 +47,16 @@
 
 class Solution(object):
     def twoSum(self, nums, target):
-        seen = {}
+        seen = {} #keep track of the numbers we have seen and their index
         
-        for i in range(len(nums)):
-            complement = target - nums[i] 
-            if complement in seen:
-                return [seen[complement], i]
+        for i in range(len(nums)): #for every number in the list
+            complement = target - nums[i] #we calculate the complement from the target
+            if complement in seen: #if we have reorded the number in seen
+                return [seen[complement], i] #return the index of that number and the one of the current number
 
-            seen[nums[i]] = i
+            seen[nums[i]] = i  #record the number if we have not found the solution
 
-
+#test
 if __name__ == "__main__" :
     solution = Solution()
     

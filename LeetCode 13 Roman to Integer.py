@@ -57,7 +57,7 @@
 
 class Solution(object):
     def romanToInt(self, s):
-        myMap = {
+        myMap = {  #store values in a map
         'I' : 1,
         'V' : 5,
         'X' : 10,

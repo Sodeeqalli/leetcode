@@ -31,9 +31,9 @@
 #All we have to do is convert the integer to a string and then do the check
 
 class Solution(object):
-    def isPalindrome(self, x):
-        palindrome = str(x) == str(x)[::-1]
-        return palindrome
+    def isPalindrome(self, x): 
+        palindrome = str(x) == str(x)[::-1] #simply check if the string version of x is equal to the inverted string version of x and store in a variable
+        return palindrome #return the variable lol 
     
     
 #Test
