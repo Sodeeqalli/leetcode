@@ -52,15 +52,15 @@
 
 class Solution(object):
     def kidsWithCandies(self, candies, extraCandies):
-        most_candies = max(candies)
-        result = []
-        for i in range(len(candies)):
-            if candies[i] + extraCandies >= most_candies:
-                result.append(True)
+        most_candies = max(candies)  #get the max number of candies
+        result = [] #create variable to store result
+        for i in range(len(candies)): #for every candies count
+            if candies[i] + extraCandies >= most_candies:  # if the candies count plus extra candies is greater than or equal to most candies
+                result.append(True) #append true
             else:
-                result.append(False)
+                result.append(False) #else append false
             
-        return result
+        return result  #return result
     
     
 if __name__ == "__main__":
