@@ -67,16 +67,17 @@
 class Solution(object):
     def getLucky(self, s, k):
        #convert
-        converted = ""
-        for i in range(len(s)):
-            converted += str((ord(s[i]) - ord('a')) + 1)
+        converted = ""   #variable to store coverted string
+        for i in range(len(s)): #for every letter
+            converted += str((ord(s[i]) - ord('a')) + 1) #concatenate its position to converted
         
-        for i in range(k):
-            value = 0
-            for j in range(len(converted)):
-                value += int(converted[j])
+        #after conversion, transform
+        for i in range(k): #for the number of times we are told to perform the operation
+            value = 0  #initialize value to zero
+            for j in range(len(converted)): #for every individual letter(number) in the converted string
+                value += int(converted[j]) #add it to the value
             
-            converted = str(value)
+            converted = str(value) #the new converted string will be the calculated value
         
         return value
 
