@@ -53,10 +53,11 @@ class Solution(object):
             if i + 1 < len(s): #and the letter index + 1 is still in range
                 result += abs(ord(s[i]) - ord(s[i+1])) #add the absolute difference of the letter and next ascii values to result
         return result #return result
-    
+ 
+ #test   
 if __name__ == "__main__" :
     solution = Solution()
 
-    print(solution.scoreOfString('hello'))
+    print(solution.scoreOfString('brother'))
        
 
