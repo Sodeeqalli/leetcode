@@ -49,3 +49,7 @@ class Solution(object):
         original = [int(letter) for letter in backstring] #convert each element back to an integer
         return original #return
     
+#test
+if __name__ == "__main__":
+    solution = Solution()
+    print(solution.plusOne([4,3,2,1]))
