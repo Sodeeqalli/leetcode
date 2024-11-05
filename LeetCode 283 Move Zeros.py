@@ -40,10 +40,10 @@ class Solution(object):
         for i in range(len(indices)): #for every index we have kept track of
             nums.append(0) #append zero to the original array
             nums.pop(indices[i]-i) #remove zero from the index stored minus the iteration count
-            #we remove iteration count cause as we are removing from the front, the array moves to the left
+            #we remove iteration count cause as we are popping from the front, the array moves one side to the left
         return nums
     
     #test
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.moveZeroes([0,1,0,3,12]))
+    print(solution.moveZeroes([0,1,0,3,12]))    ``
