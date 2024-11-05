@@ -42,3 +42,8 @@ class Solution(object):
             nums.pop(indices[i]-i) #remove zero from the index stored minus the iteration count
             #we remove iteration count cause as we are removing from the front, the array moves to the left
         return nums
+    
+    #test
+if __name__ == "__main__":
+    solution = Solution()
+    print(solution.moveZeroes([0,1,0,3,12]))
