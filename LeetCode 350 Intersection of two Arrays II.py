@@ -32,7 +32,7 @@ class Solution(object):
                 common.append(nums1[i]) #add it to common
                 nums2.remove(nums1[i]) #remove from num2 so we dont count twice
         return common #return common
-    
+#test
 if __name__ == "__main__":
     solution = Solution()
     print(solution.intersect([1,2,2,1], [2,2]))
