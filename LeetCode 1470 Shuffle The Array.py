@@ -37,3 +37,8 @@ class Solution(object):
             i+=1 #increase first pointer by one
             j+=1 #increase second pointer by one
         return shuffled #return the shuffled array
+
+#test
+if __name__ == "__main__":
+    solution = Solution()
+    print(solution.shuffle([1,2,3,4,4,3,2,1], 4)) 
